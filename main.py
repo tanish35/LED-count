@@ -1,7 +1,7 @@
 import cv2
 import mediapipe as mp
 import time
-# import controller as cnt
+import controller as cnt
  
 
 time.sleep(2.0)
@@ -50,7 +50,7 @@ with mp_hand.Hands(min_detection_confidence=0.5,
                 2, (255, 0, 0), 5)
             cv2.putText(image, "LED", (100, 375), cv2.FONT_HERSHEY_SIMPLEX,
                 2, (255, 0, 0), 5)
-            # cnt.led(total)
+            cnt.led(total)
         cv2.imshow("Frame",image)
         k=cv2.waitKey(1)
         if k==ord('q'):
